@@ -1,0 +1,41 @@
+.Grid {
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Cell {
+  flex: 1;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 2em;
+}
+
+.roomba {
+  font-size: 24px;
+  margin: auto auto;
+}
+
+.right {
+  transform: rotate(0.25turn);
+}
+
+.down {
+  transform: rotate(0.5turn);
+}
+
+.left {
+  transform: rotate(0.75turn);
+}
+
+.up {
+  transform: rotate(1turn);
+}
