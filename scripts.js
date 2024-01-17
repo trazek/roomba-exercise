@@ -19,9 +19,9 @@ function turnRight() {
   if (currentDirection > directionCount - 1) {
     currentDirection = 0;
     roombaElement.classList.add(initDirection);
+  } else {
+    roombaElement.classList.add(directions[currentDirection]);
   }
-
-  roombaElement.classList.add(directions[currentDirection]);
 }
 
 turnRightButton.addEventListener("click", turnRight);
@@ -47,7 +47,7 @@ goForwardButton.addEventListener("click", () => {
   }
 
   if (directionClass === "down" && currentY > 9) {
-    currentX = 9;
+    currentY = 9;
     turnRight();
   }
 
@@ -67,6 +67,7 @@ goForwardButton.addEventListener("click", () => {
   const moveToCell = moveToColumn.querySelector(
     `.Cell:nth-child(${currentY + 1})`
   );
+  console.log(currentX, currentY, moveToColumn, moveToCell);
 
   moveToCell.appendChild(roombaElement);
 });
